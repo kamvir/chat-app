@@ -1,7 +1,9 @@
 # chat-app
-It's a basic chat-app, integrated with firebase to send messages. 
-We can only send and receive text messages.
-It,s not one to one communication app, but you can communicate with anyone who has this app and communicate with it.
+<ul>
+  <li>It's a basic chat-app, integrated with firebase to send messages.</li>
+  <li>We can only send and receive text messages.</li>
+  <li>It,s not one to one communication app, but you can communicate with anyone who has this app and communicate with it.
+  </li></ul>
 
 # Getting started
 <ul>
