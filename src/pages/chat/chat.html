@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{username}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div id="chatMessages">
+<div class="message" *ngFor="let message of messages" [class]="message.specialMessage ? 'message special' : 'message' ">
+ <div [class]="message.username == username ? 'innerMessage messageRight' : 'innerMessage messageLeft' " >
+<div class="username">{{message.username}}</div>
+<div class="messageContent">{{message.message}}&nbsp; <div class="date">{{message.date | date: 'shortTime'}}</div>
+</div>
+
+  </div>
+</div>
+</div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <div class="footer">
+         <div class="elem"><ion-input type="text" [(ngModel)]="message" placeholder="Type a message" (keyup.enter)="sendMessage()"></ion-input></div> 
+         <div class="image"><button ion-button icon-only clear (click)="getImage()"><ion-icon name="images"></ion-icon></button></div>
+          <div class="elem"><button ion-button icon-only clear (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>
+      </div>
+     
+    </ion-toolbar>
+  </ion-footer>
