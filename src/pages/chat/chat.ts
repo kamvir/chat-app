@@ -1,7 +1,7 @@
 import { Component, ViewChild} from '@angular/core';
 import { NavController, NavParams, Content } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
-import { Camera } from '@ionic-native/camera';
+
 
 
 @Component({
@@ -20,7 +20,7 @@ export class ChatPage{
   imageUrl: string;
   isClicked=true;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public db: AngularFireDatabase, private camera: Camera) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public db: AngularFireDatabase) {
   this.username = this.navParams.get('username');
   this.s = this.db.list('/chat').subscribe( data =>{
     this.messages = data;
@@ -63,17 +63,6 @@ this.db.list('/chat').push({
 }
 
 
-getImage(){
-  // let loader = this.loadingCtrl.create({
-  //   content: 'Please wait...'
-  // });
-  // loader.present();
-  this.camera.getPicture({
-    quality: 100,
-    sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-    correctOrientation: true,
-    encodingType: this.camera.EncodingType.JPEG
-  });
-}
+
 
 }
