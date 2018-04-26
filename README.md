@@ -8,9 +8,9 @@
 # Getting started
 <ul>
 <li><a href="https://nodejs.org/" rel="nofollow">Download the installer</a> for Node.js 6 or greater.</li>
-<li>Install the ionic CLI globally: <b>npm install -g ionic</b></li>
-<li>Run <b>npm install</b> from the project root.</li>
-<li>Run <b>ionic serve</b> in a terminal from the project root.</li>
+<li>Install the ionic CLI globally: <code>npm install -g ionic</code></li>
+<li>Run <code>npm install</code> from the project root.</li>
+<li>Run <code>ionic serve</code> in a terminal from the project root.</li>
 </ul>
 
 <h3>
